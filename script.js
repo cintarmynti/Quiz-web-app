@@ -63,37 +63,37 @@ let questions = [{
 ];
 
 
-console.log(questions[0].answers[0].option);
+// console.log(questions[0].answers[0].option);
+
+let no = 0;
 
 window.onload = function () {
     document.getElementById("pertanyaan").innerHTML = questions[0].question;
     document.getElementById("nomer").innerHTML = no;
+
+    let text = "";
    
     for(let j=0; j<4; j++){
-        myFunction(j)
+        let pilihanJawaban = questions[no].answers[j].option;
+        text += pilihanJawaban  + "<br>";
+        document.getElementById("demo").innerHTML = text;
     }
 };
 
-
-let text = "";
-
-let no = 0;
-
-function myFunction(index, no = 0) {
-    let pilihanJawaban = questions[no].answers[index].option;
-    text += pilihanJawaban  + "<br>";
-    document.getElementById("demo").innerHTML = text;
-    
-}
 
 function next() {
     if (no < questions.length - 1) {
         no += 1;
         document.getElementById("pertanyaan").innerHTML = questions[no].question;
         document.getElementById("nomer").innerHTML = no;
-        
+
+       
+    let text = "";
+   
         for(let j=0; j<4; j++){
-            myFunction(j, no)
+            let pilihanJawaban = questions[no].answers[j].option;
+            text += pilihanJawaban  + "<br>";
+            document.getElementById("demo").innerHTML = text;
         }    
     }
 }
@@ -104,12 +104,17 @@ function prev() {
         document.getElementById("pertanyaan").innerHTML = questions[no].question;
         document.getElementById("nomer").innerHTML = no;
         
+            
+    let text = "";
+   
         for(let j=0; j<4; j++){
-            myFunction(j, no)
-        }    
+            let pilihanJawaban = questions[no].answers[j].option;
+            text += pilihanJawaban  + "<br>";
+            document.getElementById("demo").innerHTML = text;
+        }   
     }
 }
 
 function cekJawaban() {
-
+    
 }
