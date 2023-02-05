@@ -74,7 +74,7 @@ window.onload = function () {
     let text = "";
    
     for(let j=0; j<4; j++){
-        let pilihanJawaban = questions[no].answers[j].option;
+        let pilihanJawaban = '<button onClick="cekJawaban('+j+')" id="pilihan'+ j +'" value="'+ questions[no].answers[j].answer+'">' + questions[no].answers[j].option + '</button>';
         text += pilihanJawaban  + "<br>";
         document.getElementById("demo").innerHTML = text;
     }
@@ -91,11 +91,13 @@ function next() {
     let text = "";
    
         for(let j=0; j<4; j++){
-            let pilihanJawaban = questions[no].answers[j].option;
+            let pilihanJawaban = '<button onClick="cekJawaban('+j+')" id="pilihan'+ j +'" value="'+ questions[no].answers[j].answer+'">' + questions[no].answers[j].option + '</button>';
             text += pilihanJawaban  + "<br>";
             document.getElementById("demo").innerHTML = text;
         }    
     }
+
+  
 }
 
 function prev() {
@@ -108,13 +110,31 @@ function prev() {
     let text = "";
    
         for(let j=0; j<4; j++){
-            let pilihanJawaban = questions[no].answers[j].option;
+            let pilihanJawaban = '<button onClick="cekJawaban('+j+')" id="pilihan'+ j +'" value="'+ questions[no].answers[j].answer  +'">' + questions[no].answers[j].option + '</button>';
             text += pilihanJawaban  + "<br>";
             document.getElementById("demo").innerHTML = text;
         }   
     }
 }
 
-function cekJawaban() {
-    
+
+let nilai = 0;
+function cekJawaban(i) {
+        var jwb = document.getElementById('pilihan'+i).value;
+        if(jwb == 'true'){
+            nilai +=10;
+            console.log(nilai);
+            return nilai;
+        }else if(jwb == 'false'){
+            nilai -= 10;
+            return nilai;
+        }
 }
+
+
+    
+
+
+
+
+
