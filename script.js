@@ -60,6 +60,162 @@ let questions = [{
         },
     ],
 },
+{
+    question: "4. Ibukota negara rusia adalah ...",
+    answers: [
+        {
+            option: "Amsterdam",
+            answer: false
+        },
+        {
+            option: "Denmark",
+            answer: false
+        },
+        {
+            option: "Paris",
+            answer: false
+        },
+        {
+            option: "Moscow",
+            answer: true
+        },
+    ],
+},
+
+{
+    question: "5. Ibukota negara Belanda adalah ...",
+    answers: [
+        {
+            option: "Amsterdam",
+            answer: true
+        },
+        {
+            option: "Denmark",
+            answer: false
+        },
+        {
+            option: "Paris",
+            answer: false
+        },
+        {
+            option: "Moscow",
+            answer: false
+        },
+    ],
+},
+
+{
+    question: "6. Berdasarkan makanannya, ular termasuk jenis ...",
+    answers: [
+        {
+            option: "Melata",
+            answer: false
+        },
+        {
+            option: "Herbivora",
+            answer: false
+        },
+        {
+            option: "Karnivora",
+            answer: true
+        },
+        {
+            option: "Omnivora",
+            answer: false
+        },
+    ],
+},
+
+{
+    question: "7. Berdasarkan makanannya, ular termasuk jenis ...",
+    answers: [
+        {
+            option: "Melata",
+            answer: false
+        },
+        {
+            option: "Herbivora",
+            answer: false
+        },
+        {
+            option: "Karnivora",
+            answer: true
+        },
+        {
+            option: "Omnivora",
+            answer: false
+        },
+    ],
+},
+
+{
+    question: "8. Negara yang awalnya satu negara adalah ...",
+    answers: [
+        {
+            option: "Bosnia dan Herzegovina",
+            answer: false
+        },
+        {
+            option: "Korean dan China",
+            answer: false
+        },
+        {
+            option: "Serbia dan Montenegro",
+            answer: true
+        },
+        {
+            option: "Trinad dan Tobago",
+            answer: false
+        },
+    ],
+},
+
+{
+    question: "9. Negara yang tidak pernah dijajah Asean ...",
+    answers: [
+        {
+            option: "Timor Leste",
+            answer: false
+        },
+        {
+            option: "Thailand",
+            answer: true
+        },
+        {
+            option: "Malaysia",
+            answer: false
+        },
+        {
+            option: "Singapura",
+            answer: false
+        },
+    ],
+},
+
+{
+    question: "10. Mesir adalah negara yang masuk dalam benua ...",
+    answers: [
+        {
+            option: "Afrika",
+            answer: true
+        },
+        {
+            option: "Asia",
+            answer: false
+        },
+        {
+            option: "Eropa",
+            answer: false
+        },
+        {
+            option: "Amerika",
+            answer: false
+        },
+    ],
+},
+
+
+
 ];
 
 
@@ -95,9 +251,12 @@ function next() {
             document.getElementById("demo").innerHTML = text;
         }    
     }else if(no == questions.length - 1){
-        setTimeout(totalScore, 3000);
+        setTimeout(totalScore, 1000);
         var element = document.getElementById("soal");
         element.classList.add("d-none");
+
+        var ScoreTotal = document.getElementById("score");
+        ScoreTotal.classList.remove("d-none");
     }
 
   
@@ -124,7 +283,7 @@ function totalScore(){
     let sum = score.reduce(function(a, b){
         return a + b;
     });
-      
+    document.getElementById("scorePemain").innerHTML = sum;
       console.log(sum);
 }
 
