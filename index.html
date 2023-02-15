@@ -64,8 +64,43 @@
         }
 
         #particles-js{
-            height: 100vh;
+           
+            height: 98vh;
         }
+
+        #soal{
+            position: absolute;
+            width: 100%;
+        }
+
+        #score{
+            position: absolute;
+            width: 100%;
+        }
+
+        #footer{
+           position: fixed;
+           bottom: 0;
+           left: 0;
+           height: 20px;
+           background-color: #EDDBC7;
+           color: black;
+           width: 100%;
+           font-size: smaller;
+           text-align: center;
+        }
+
+        @media (min-width: 360px) { 
+            #demo{
+                display: block;
+            }
+         }
+
+         @media (min-width: 992px) { 
+            #demo{
+                display: flex;
+            }
+         }
 
        
     </style>
@@ -79,7 +114,7 @@
         
       
             <div class="text-center">
-                <div id="demo" class="d-flex flex-row">
+                <div id="demo" class="">
                     
                 </div>
                 <!-- <h2 id="nomer"></h2> -->
@@ -91,8 +126,11 @@
             <p class="teks teks-score">Score anda</p>
             <p class="teks" id="scorePemain"></p>
         </div>
+      
     </div>
-   
+    <div id="footer">
+        <p> &#9829; Made By Cinta Ramayanti &#9829; </p>
+    </div>
     <!-- <button onclick="prev()">prev</button> -->
     <!-- <button onclick="next()">next</button> -->
 
