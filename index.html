@@ -1,132 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quiz</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
-        body{
+        body {
             background-color: #A7727D;
             font-family: 'Fredoka One', cursive;
         }
 
-        .btn-pil{
-            background-color: #EDDBC7;
-            /* color: white; */
-            border: none;
-            margin: 6px;
-            border-radius: 6px;
-            height: 250px;
-        }
 
-        .btn-pil:hover{
+
+        .btn-pil:hover {
             background-color: #F9F5E7;
             color: #A7727D;
         }
 
-        .row1{
-            height: 50vh;
-           
-        }
 
-        .row2{
-            height: 50vh;
-            text-align: center;
-        }
-
-        .pertanyaan{
+        .pertanyaan {
             display: table-cell;
             vertical-align: middle;
             font-size: larger;
         }
 
-        .soal{
-            display: table;
-        width: 100%;
-        height: 50vh;
-        text-align: center;
-        }
+      
 
-        .teks-score{
+        .teks-score {
             display: inline-block;
             vertical-align: middle;
-            line-height: normal;      
+            line-height: normal;
         }
 
-        .teks{
+        .teks {
             color: #F9F5E7;
             font-size: 28px;
 
         }
 
-        #particles-js{
-           
+        #particles-js {
+
             height: 98vh;
         }
 
-        #soal{
+        #soal {
             position: absolute;
             width: 100%;
         }
 
-        #score{
+        #score {
             position: absolute;
             width: 100%;
         }
 
-        #footer{
-           position: fixed;
-           bottom: 0;
-           left: 0;
-           height: 20px;
-           background-color: #EDDBC7;
-           color: black;
-           width: 100%;
-           font-size: smaller;
-           text-align: center;
+        #footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 20px;
+            background-color: #EDDBC7;
+            color: black;
+            width: 100%;
+            font-size: smaller;
+            text-align: center;
         }
 
-        @media (min-width: 360px) { 
-            #demo{
+        @media (min-width: 360px) {
+            #demo {
                 display: block;
             }
-         }
 
-         @media (min-width: 992px) { 
-            #demo{
+            .btn-pil{
+            background-color: #EDDBC7;
+            /* color: white; */
+            border: none;
+            margin: 6px;
+            border-radius: 6px;
+            height: 100px;
+        }
+
+        .soal {
+            display: table;
+            width: 100%;
+            height: 30vh;
+            text-align: center;
+        }
+
+        }
+
+        @media (min-width: 992px) {
+            #demo {
                 display: flex;
             }
-         }
 
-       
+            .btn-pil {
+                background-color: #EDDBC7;
+                /* color: white; */
+                border: none;
+                margin: 6px;
+                border-radius: 6px;
+                height: 250px;
+            }
+
+            .soal {
+            display: table;
+            width: 100%;
+            height: 50vh;
+            text-align: center;
+        }
+
+
+        }
     </style>
 </head>
+
 <body>
     <div id="particles-js">
         <div class="text-white" id="soal">
             <div class="soal">
-                 <p class="pertanyaan text-center text-capitalize"  id="pertanyaan"></p>
+                <p class="pertanyaan text-center text-capitalize" id="pertanyaan"></p>
             </div>
-        
-      
+
+
             <div class="text-center">
                 <div id="demo" class="">
-                    
+
                 </div>
                 <!-- <h2 id="nomer"></h2> -->
             </div>
-       
-       
+
+
         </div>
         <div id="score" class="d-flex d-none flex-column min-vh-100 justify-content-center align-items-center">
             <p class="teks teks-score">Score anda</p>
             <p class="teks" id="scorePemain"></p>
         </div>
-      
+
     </div>
     <div id="footer">
         <p> &#9829; Made By Cinta Ramayanti &#9829; </p>
@@ -135,9 +150,12 @@
     <!-- <button onclick="next()">next</button> -->
 
 </body>
- 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
 <script src="script.js"></script>
 <script src="particles.js"></script>
 <script src="app.js"></script>
+
 </html>
